@@ -1,0 +1,220 @@
+/*
+  Theme Name: Name - unify
+  Author:
+  Support: admin@gmail.com
+  Description: Creative  HTML5 template.
+  Version: 1.0
+*/
+/* CSS Index
+-----------------------------------
+1. Theme default css
+2. header
+3. slider
+4. about-area
+5. features-box
+6. department
+7. team
+8. video-area
+9. counter
+10. footer
+*/
+
+
+/* ========= Google Font Add ===========  */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Raleway:wght@400;500;600;700;800&display=swap');
+
+:root {
+
+    /* colors  */
+    --green: #8ec448 ;
+    --white: #ffffff;
+    --black: #000000;
+    --text-color: #353535;
+    --section:#F1F1F1;
+
+
+
+    /* fonts  */
+    --Raleway: 'Raleway', sans-serif;
+    --Lato: 'Lato', sans-serif;
+
+
+
+}
+
+/* ========= Custom ScrollBar Part Start ===========  */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* ========= Global CSS Part Start ===========  */
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+
+
+section {
+  padding: 100px 0;
+}
+
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--black);
+  font-family: var(-poppins);
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: normal;
+  color: #353535;
+  margin-top: 0px;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: normal;
+}
+
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+input,
+textarea,
+button {
+  outline: none;
+}
+
+
+.myfix:after {
+  content: "";
+  display: block;
+  clear: both;
+  width: 0%;
+  height: 0%;
+}
+
+a,
+.button {
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+}
+
+a:focus,
+.button:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+
+
+*::-moz-selection {
+  background: #d6b161;
+  color: #fff;
+  text-shadow: none;
+}
+
+::-moz-selection {
+  background: #444;
+  color: #fff;
+  text-shadow: none;
+}
+
+::selection {
+  background: #444;
+  color: #fff;
+  text-shadow: none;
+}
+
+*::-moz-placeholder {
+  color: #000;
+  font-size: 14px;
+  opacity: 1;
+}
+
+*::placeholder {
+  color: #000;
+  font-size: 14px;
+  opacity: 1;
+}
+
+
+.btn {
+  font-size: 13px;
+  margin: 0;
+  padding: 15px 40px;
+  border: 1px solid #121212;
+  text-transform: uppercase;
+  color: #121212;
+  transition: all 0.3s ease;
+  font-weight: 700;
+}
+
+.btn:hover {
+  background: #8EC448;
+  color: #fff;
+  border: 1px solid transparent;
+}
+
+.btn-active {
+  background: #8EC448;
+  color: #fff;
+  border: 1px solid transparent;
+}
+
+.sectionHeading h1 {
+  font-size: 40px;
+  font-weight: 500;
+  text-align: center;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+
+/* ============header============*/
+
+/* ============The End============ */

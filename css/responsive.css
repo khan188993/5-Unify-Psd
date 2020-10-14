@@ -1,0 +1,33 @@
+/* XL Device :1200px. */
+@media (max-width: 1500px) {}
+
+/* LG Device :992px. */
+@media (max-width: 1200px) {
+
+}
+
+/* MD Device :768px. */
+@media (max-width: 991px) {
+
+}
+
+/* SM Small Device :550px. */
+@media only screen and (max-width: 767px) {
+ 
+}
+
+/* Extra small Device. */
+@media (max-width: 576px) {
+
+}
+
+/* mobile Device. */
+@media (max-width: 420px) {
+  
+}
+
+@media (max-width: 320px) {
+  
+}
+
+/* By Kazi Talat Hridoy */
