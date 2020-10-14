@@ -20,3 +20,4 @@
 [1013/155445.786:ERROR:filesystem_win.cc(116)] GetFileAttributes C:\Users\Asus\AppData\Local\Google\Chrome\User Data\Crashpad\reports\7769a8d4-6dd1-4509-913d-85d029f576d2.dmp: The system cannot find the file specified. (0x2)
 [1013/155445.786:ERROR:filesystem_win.cc(116)] GetFileAttributes C:\Users\Asus\AppData\Local\Google\Chrome\User Data\Crashpad\reports\ac92ac49-23e1-4dea-b5ae-ba8e28618f75.dmp: The system cannot find the file specified. (0x2)
 [1013/155445.786:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1015/005431.496:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)

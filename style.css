@@ -25,18 +25,18 @@
 
 :root {
 
-    /* colors  */
-    --green: #8ec448 ;
-    --white: #ffffff;
-    --black: #000000;
-    --text-color: #353535;
-    --section:#F1F1F1;
+  /* colors  */
+  --green: #8ec448;
+  --white: #ffffff;
+  --black: #000000;
+  --text-color: #353535;
+  --section: #F1F1F1;
 
 
 
-    /* fonts  */
-    --Raleway: 'Raleway', sans-serif;
-    --Lato: 'Lato', sans-serif;
+  /* fonts  */
+  --Raleway: 'Raleway', sans-serif;
+  --Lato: 'Lato', sans-serif;
 
 
 
@@ -92,19 +92,24 @@ ul {
 
 
 section {
-  padding: 100px 0;
+  padding: 100px 0!important;
 }
 
 
 p {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
-  color: var(--black);
-  font-family: var(-poppins);
+  line-height: 24px;
+  font-family: var(--Lato)
 
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Raleway', sans-serif;
   font-weight: normal;
   color: #353535;
@@ -141,18 +146,22 @@ a,
   -moz-transition: all 0.3s ease-out 0s;
   -ms-transition: all 0.3s ease-out 0s;
   -o-transition: all 0.3s ease-out 0s;
-  transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s!important;
+}
+
+a{
+  text-decoration: none!important;
 }
 
 a:focus,
 .button:focus {
-  text-decoration: none;
-  outline: none;
+  text-decoration: none!important;
+  outline: none!important;
 }
 
 
 
-*::-moz-selection {
+/* *::-moz-selection {
   background: #d6b161;
   color: #fff;
   text-shadow: none;
@@ -180,7 +189,7 @@ a:focus,
   color: #000;
   font-size: 14px;
   opacity: 1;
-}
+} */
 
 
 .btn {
@@ -206,15 +215,186 @@ a:focus,
   border: 1px solid transparent;
 }
 
-.sectionHeading h1 {
-  font-size: 40px;
-  font-weight: 500;
+.sectionHeading{
   text-align: center;
-  position: relative;
-  padding-bottom: 20px;
+}
+
+.sectionHeading h1 {
+	font-size: 24px;
+	text-transform: uppercase;
+	line-height: 1;
+	position: relative;
+	margin-bottom: 35px;
+	font-weight: 700;
+}
+
+.sectionHeading h1::before {
+	position: absolute;
+	content: "";
+	background: #353535;
+	height: 1px;
+	width: 50px;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: -20px;
+}
+
+.sectionHeading p {
+	font-size: 16px;
+	font-style: italic;
+	margin-bottom: 35px;
+	margin-bottom: 45px;
 }
 
 
 /* ============header============*/
+
+#header {
+	background: #ffffffb8;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 2;
+}
+
+.main-menu nav ul li {
+  float: left;
+}
+
+.main-menu nav ul li a {
+	display: block;
+	padding: 40px 16px;
+	color: var(--text-color);
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 14px;
+}
+
+.main-menu nav ul li a:hover {
+  color: var(--green);
+}
+
+
+.search-bar form input {
+  background: none;
+  border: 1px solid #cfc1c1;
+}
+
+.search-bar form {
+  position: relative;
+}
+
+.search-bar form input {
+  padding: 5px 10px;
+  height: 36px;
+  width: 160px;
+}
+
+.search-bar form i {
+  display: inline-block;
+  width: 44px;
+  height: 35px;
+  position: absolute;
+  top: 0;
+  right: -6px;
+  border-left: 2px solid #e3d8d8;
+  z-index: 1;
+  line-height: 35px;
+  padding-left: 10px;
+  color: var(--text-color);
+}
+
+
+/* ============Hero Slider============*/
+.single-slider {
+	position: relative;
+	min-height: 500px;
+	height: 100vh;
+	text-align: center;
+	background: aqua;
+}
+
+.slider-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50% ,-50%);
+}
+
+.slider-text h2 {
+	font-size: 24px;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+.slider-text h1 {
+	font-size: 60px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.slider-btn a {
+	margin-left: 23px;
+	margin-top: 11px;
+}
+
+
+.slider-area .slider-active .owl-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: -90px;
+  z-index: 99999;
+  position: relative;
+}
+
+.slider-area .slider-active .owl-dot {
+width: 15px;
+height: 15px;
+background: var(--white);
+margin-right: 20px;
+border: 2px solid #020202;
+border-radius: 50%;
+}
+
+.slider-area .slider-active .owl-dot.active {
+background: var(--green);
+}
+
+/* ============Our Services============*/
+#services {
+  padding-top: 160px!important;
+  padding-bottom:100px;
+}
+
+.single-service {
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+
+.single-service i {
+  color: #353535;
+  font-size: 35px;
+  margin-bottom: 10px;
+  display: block;
+}
+.single-service h2 {
+  font-size: 14px;
+  color: #353535;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+.single-service p {
+	font-size: 14px;
+	color: #353535;
+	margin: 7px 0;
+	padding: 0 9px;
+	text-align: center;
+}
+.single-service {
+  text-align: center;
+}
+
 
 /* ============The End============ */
