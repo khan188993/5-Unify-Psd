@@ -201,6 +201,21 @@
 // })(jQuery);
 
 $(document).ready(function(){
+
+    //sticky header active code 
+
+    $(window).scroll(function(){
+        // sticky navbar on scroll script
+        if(this.scrollY > 100){
+            $('.header-area').addClass("sticky");
+        }else{
+            $('.header-area').removeClass("sticky");
+        }
+        
+    });
+
+    // owl carousel active code 
+
   $('.slider-active.owl-carousel').owlCarousel({
     loop:true,
     nav:false,
@@ -219,5 +234,74 @@ $(document).ready(function(){
         }
     }
 })
+    // Blog Owl carousel active code 
+
+  $('.blog-active.owl-carousel').owlCarousel({
+    loop:true,
+    nav:false,
+    navText:['<i class="fas fa-arrow-circle-left"></i>','<i class="fas fa-arrow-circle-right"></i>'],
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+        },
+        600:{
+            items:2,
+        },
+        1000:{
+            items:2,
+        }
+    }
+})
+    // Blog Owl carousel active code 
+
+  $('.partner-active.owl-carousel').owlCarousel({
+    loop:true,
+    nav:false,
+    margin:30,
+    navText:['<i class="fas fa-arrow-circle-left"></i>','<i class="fas fa-arrow-circle-right"></i>'],
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:2,
+        },
+        600:{
+            items:3,
+        },
+        1000:{
+            items:5,
+        }
+    }
+})
+
+
+// isotop plugin code 
+
+var $grid =$('.grid').isotope({
+    itemSelector: '.grid-item',
+    percentPosition: true,
+    masonry: {
+      // use outer width of grid-sizer for columnWidth
+      columnWidth: '.grid-item'
+    }
+  })
+
+  // filter items on button click
+  $('.work-btn').on('click', 'button', function() {
+    var filterValue = $(this).attr('data-filter');
+    $grid.isotope({
+      filter: filterValue
+    });
+  });
+
+  //for menu active class
+  $('.work-btn button').on('click', function(event) {
+    $(this).siblings('.active').removeClass('active');
+    $(this).addClass('active');
+    event.preventDefault();
+  });
+
+
+
 
 })
