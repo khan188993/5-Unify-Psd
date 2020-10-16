@@ -273,6 +273,26 @@ $(document).ready(function(){
         }
     }
 })
+    // Client Owl carousel active code 
+
+  $('.client-active.owl-carousel').owlCarousel({
+    loop:true,
+    nav:false,
+    margin:30,
+    navText:['<i class="fas fa-arrow-circle-left"></i>','<i class="fas fa-arrow-circle-right"></i>'],
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+        },
+        600:{
+            items:1,
+        },
+        1000:{
+            items:2,
+        }
+    }
+})
 
 
 // isotop plugin code 
