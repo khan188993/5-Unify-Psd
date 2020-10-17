@@ -1,342 +1,166 @@
-// (function($) {
-//   "use strict";
+$(document).ready(function () {
 
-//   $(window).on('scroll', function() {
-//     var scroll = $(window).scrollTop();
-//     if (scroll < 100) {
-//       $("#sticky-header").removeClass("sticky-menu");
-//     } else {
-//       $("#sticky-header").addClass("sticky-menu");
-//     }
-//   });
+    // Responsive Menu click Button 
 
-//   $('.main-menu ul li:first-child > a').addClass('active')
-//   $('.main-menu ul li > a').on('click', function() {
-//     $('.basic-menu li a').removeClass('active');
-//     $(this).addClass("active");
-//   });
+    $('.menu-btn').click(function () {
+        $('.basic-menu').toggleClass("active");
+        $('.menu-btn i').toggleClass("active");
+    });
 
-//   function smoothSctollTop() {
-//     $('.main-menu ul li > a').on('click', function(event) {
-//       var target = $(this.getAttribute('href'));
-//       if (target.length) {
-//         event.preventDefault();
-//         $('html, body').stop().animate({
-//           scrollTop: target.offset().top - 20
-//         }, 800);
-//       }
-//     });
-//   }
-//   smoothSctollTop();
+    //sticky header,scroll btn active code 
 
-//   $(window).scroll(function() {
-//     if ($(this).scrollTop() > 500) {
-//       $('.goTop').fadeIn();
-//     } else {
-//       $('.goTop').fadeOut();
-//     }
-//   });
-
-//   $(".goTop").on('click', function() {
-//     $("body, html").animate({
-//       scrollTop: 0
-//     }, 500);
-//     return false;
-//   });
-
-//   $('#mobile-menu').meanmenu({
-//     meanScreenWidth: "767",
-//     meanMenuContainer: '.mobile-menu',
-//   });
-//   //mobile menu
-
-//   function mainSlider() {
-//     var BasicSlider = $('.slider-active');
-//     BasicSlider.on('init', function(e, slick) {
-//       var $firstAnimatingElements = $('.single-slider:first-child').find('[data-animation]');
-//       doAnimations($firstAnimatingElements);
-//     });
-//     BasicSlider.on('beforeChange', function(e, slick, currentSlide, nextSlide) {
-//       var $animatingElements = $('.single-slider[data-slick-index="' + nextSlide + '"]').find('[data-animation]');
-//       doAnimations($animatingElements);
-//     });
-//     BasicSlider.slick({
-//       autoplay: false,
-//       autoplaySpeed: 10000,
-//       dots: true,
-//       fade: true,
-//       arrows: false,
-//       responsive: [{
-//         breakpoint: 767,
-//         settings: {
-//           dots: false,
-//           arrows: false,
-//           fade: false
-//         }
-//       }]
-//     });
-
-//     function doAnimations(elements) {
-//       var animationEndEvents = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-//       elements.each(function() {
-//         var $this = $(this);
-//         var $animationDelay = $this.data('delay');
-//         var $animationType = 'animated ' + $this.data('animation');
-//         $this.css({
-//           'animation-delay': $animationDelay,
-//           '-webkit-animation-delay': $animationDelay
-//         });
-//         $this.addClass($animationType).one(animationEndEvents, function() {
-//           $this.removeClass($animationType);
-//         });
-//       });
-//     }
-//   }
-//   mainSlider();
-//   new WOW().init();
-
-
-//   $('.grid').isotope({
-//     itemSelector: '.grid-item',
-//     percentPosition: true,
-//     masonry: {
-//       // use outer width of grid-sizer for columnWidth
-//       columnWidth: '.grid-item'
-//     }
-//   })
-
-//   // filter items on button click
-//   $('.protfolio-part').on('click', 'button', function() {
-//     var filterValue = $(this).attr('data-filter');
-//     $grid.isotope({
-//       filter: filterValue
-//     });
-//   });
-
-//   //for menu active class
-//   $('.protfolio-part button').on('click', function(event) {
-//     $(this).siblings('.active').removeClass('active');
-//     $(this).addClass('active');
-//     event.preventDefault();
-//   });
-//   // init Isotope
-//   var $grid = $('.grid').isotope({
-//     // options
-//   });
-
-//   $('.client-active').owlCarousel({
-//     loop: true,
-//     navText: ['<i class="fas fa-angle-left"></i>', '<i class="fas fa-angle-right"></i>'],
-//     margin: 10,
-//     nav: false,
-//     dots: true,
-//     responsive: {
-//       0: {
-//         items: 1
-//       },
-//       600: {
-//         items: 1
-//       },
-//       1000: {
-//         items: 2
-//       }
-//     }
-//   })
-//   $('.blog-active').owlCarousel({
-//     loop: true,
-//     navText: ['<i class="fas fa-angle-left"></i>', '<i class="fas fa-angle-right"></i>'],
-//     margin: 10,
-//     nav: false,
-//     dots: true,
-//     responsive: {
-//       0: {
-//         items: 1
-//       },
-//       800: {
-//         items: 1
-//       },
-//       1000: {
-//         items: 2
-//       }
-//     }
-//   })
-//   $('.brand-active').owlCarousel({
-//     loop: true,
-//     navText: ['<i class="fas fa-angle-left"></i>', '<i class="fas fa-angle-right"></i>'],
-//     margin: 10,
-//     nav: false,
-//     dots: true,
-//     responsive: {
-//       300: {
-//         items: 2
-//       },
-//       400: {
-//         items: 2
-//       },
-//       450: {
-//         items: 3
-//       },
-//       600: {
-//         items: 3
-//       },
-//       1000: {
-//         items: 5
-//       }
-//     }
-//   })
-
-//   var feed = new Instafeed({
-//     get: 'user',
-//     userId: 2212477307,
-//     accessToken: '2212477307.1677ed0.05b727c9a3d5415fbefe1f5d44a07c87',
-//     target: 'Instafeed',
-//     resolution: 'thumbnail',
-//     limit: 6,
-//     template: '<li><a href="{{link}}" target="_new"><img src="{{image}}" /></a></li>',
-//   });
-//   feed.run();
-
-
-
-// })(jQuery);
-
-$(document).ready(function(){
-
-    //sticky header active code 
-
-    $(window).scroll(function(){
+    $(window).scroll(function () {
         // sticky navbar on scroll script
-        if(this.scrollY > 100){
+        if (this.scrollY > 100) {
             $('.header-area').addClass("sticky");
-        }else{
+        } else {
             $('.header-area').removeClass("sticky");
         }
-        
+
+
+        // scroll-up button show/hide script
+        if (this.scrollY > 500) {
+            $('.scroll-up-btn').addClass("show");
+        } else {
+            $('.scroll-up-btn').removeClass("show");
+        }
+
     });
 
-    // owl carousel active code 
+    // Scroll Up script
+    $('.scroll-up-btn').click(function () {
+        $('html').animate({
+            scrollTop: 0
+        });
+        // removing smooth scroll on slide-up button click
+        $('html').css("scrollBehavior", "auto");
+    });
 
-  $('.slider-active.owl-carousel').owlCarousel({
-    loop:true,
-    nav:false,
-    navText:['<i class="fas fa-arrow-circle-left"></i>','<i class="fas fa-arrow-circle-right"></i>'],
-    animateOut: 'fadeOut',
-    responsiveClass:true,
-    responsive:{
-        0:{
-            items:1,
-        },
-        600:{
-            items:1,
-        },
-        1000:{
-            items:1,
+
+
+    // owl carousel slider active code 
+
+    $('.slider-active.owl-carousel').owlCarousel({
+        loop: true,
+        nav: false,
+        navText: ['<i class="fas fa-arrow-circle-left"></i>', '<i class="fas fa-arrow-circle-right"></i>'],
+        animateOut: 'fadeOut',
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            600: {
+                items: 1,
+            },
+            1000: {
+                items: 1,
+            }
         }
-    }
-})
+    })
+
+
     // Blog Owl carousel active code 
 
-  $('.blog-active.owl-carousel').owlCarousel({
-    loop:true,
-    nav:false,
-    margin:30,
-    navText:['<i class="fas fa-arrow-circle-left"></i>','<i class="fas fa-arrow-circle-right"></i>'],
-    responsiveClass:true,
-    responsive:{
-        0:{
-            items:1,
-        },
-        600:{
-            items:1,
-        },
-        1150:{
-            items:1,
-        },
-        1200:{
-            items:2,
+    $('.blog-active.owl-carousel').owlCarousel({
+        loop: true,
+        nav: false,
+        margin: 30,
+        navText: ['<i class="fas fa-arrow-circle-left"></i>', '<i class="fas fa-arrow-circle-right"></i>'],
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            600: {
+                items: 1,
+            },
+            1150: {
+                items: 1,
+            },
+            1200: {
+                items: 2,
+            }
         }
-    }
-})
-    // Blog Owl carousel active code 
+    })
 
-  $('.partner-active.owl-carousel').owlCarousel({
-    loop:true,
-    nav:false,
-    margin:30,
-    navText:['<i class="fas fa-arrow-circle-left"></i>','<i class="fas fa-arrow-circle-right"></i>'],
-    responsiveClass:true,
-    responsive:{
-        0:{
-            items:2,
-        },
-        600:{
-            items:3,
-        },
-        1000:{
-            items:5,
+
+    // Partner Owl carousel active code 
+
+    $('.partner-active.owl-carousel').owlCarousel({
+        loop: true,
+        nav: false,
+        margin: 30,
+        navText: ['<i class="fas fa-arrow-circle-left"></i>', '<i class="fas fa-arrow-circle-right"></i>'],
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 2,
+            },
+            600: {
+                items: 3,
+            },
+            1000: {
+                items: 5,
+            }
         }
-    }
-})
+    })
     // Client Owl carousel active code 
 
-  $('.client-active.owl-carousel').owlCarousel({
-    loop:true,
-    nav:false,
-    margin:30,
-    navText:['<i class="fas fa-arrow-circle-left"></i>','<i class="fas fa-arrow-circle-right"></i>'],
-    responsiveClass:true,
-    responsive:{
-        0:{
-            items:1,
-        },
-        600:{
-            items:1,
-        },
-        900:{
-            items:2,
-        },
-        1000:{
-            items:2,
+    $('.client-active.owl-carousel').owlCarousel({
+        loop: true,
+        nav: false,
+        margin: 30,
+        navText: ['<i class="fas fa-arrow-circle-left"></i>', '<i class="fas fa-arrow-circle-right"></i>'],
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            600: {
+                items: 1,
+            },
+            900: {
+                items: 2,
+            },
+            1000: {
+                items: 2,
+            }
         }
-    }
-})
+    })
 
 
-// isotop plugin code 
+    // isotop plugin code 
 
-var $grid =$('.grid').isotope({
-    itemSelector: '.grid-item',
-    percentPosition: true,
-    masonry: {
-      // use outer width of grid-sizer for columnWidth
-      columnWidth: '.grid-item'
-    }
-  })
+    var $grid = $('.grid').isotope({
+        itemSelector: '.grid-item',
+        percentPosition: true,
+        masonry: {
+            // use outer width of grid-sizer for columnWidth
+            columnWidth: '.grid-item'
+        }
+    })
 
-  // filter items on button click
-  $('.work-btn').on('click', 'button', function() {
-    var filterValue = $(this).attr('data-filter');
-    $grid.isotope({
-      filter: filterValue
+    // filter items on button click
+    $('.work-btn').on('click', 'button', function () {
+        var filterValue = $(this).attr('data-filter');
+        $grid.isotope({
+            filter: filterValue
+        });
     });
-  });
 
-  //for menu active class
-  $('.work-btn button').on('click', function(event) {
-    $(this).siblings('.active').removeClass('active');
-    $(this).addClass('active');
-    event.preventDefault();
-  });
+    //for menu active class
+    $('.work-btn button').on('click', function (event) {
+        $(this).siblings('.active').removeClass('active');
+        $(this).addClass('active');
+        event.preventDefault();
+    });
 
-   //mobile menu
-  $('.main-menu').meanmenu({
-    meanScreenWidth: "767",
-    meanMenuContainer: '.mobile-menu',
-  });
- 
-//   wow js code 
+   
 
-new WOW().init();
+    //   wow js code 
+
+    new WOW().init();
 
 
 

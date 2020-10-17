@@ -165,7 +165,7 @@ button {
 
 
 
-/* *::-moz-selection {
+*::-moz-selection {
   background: #d6b161;
   color: #fff;
   text-shadow: none;
@@ -193,7 +193,7 @@ button {
   color: #000;
   font-size: 14px;
   opacity: 1;
-} */
+}
 
 
 .btn {
@@ -252,6 +252,38 @@ button {
 }
 
 
+/* ============Scroll Up Button============*/
+
+.scroll-up-btn{
+  position: fixed;
+  height: 45px;
+  width: 42px;
+  background: var(--green);
+  right: 30px;
+  bottom: 10px;
+  text-align: center;
+  line-height: 45px;
+  color: #fff;
+  z-index: 9999;
+  font-size: 30px;
+  border-radius: 6px;
+  border-bottom-width: 2px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.scroll-up-btn.show{
+  bottom: 30px;
+  opacity: 1;
+  pointer-events: auto;
+}
+.scroll-up-btn:hover{background: black;}
+/* ============res nav============*/
+.menu-btn i {
+  color: black;
+  font-size: 22px;
+}
 /* ============header============*/
 
 #header {
@@ -321,13 +353,7 @@ button {
 }
 
 
-/* #left-triangle {
-  width: 0;
-  height: 0;
-  border-right: 100px solid green;
-  border-top: 50px solid transparent;
-  border-bottom: 50px solid transparent;
-} */
+
 
 .main-menu nav ul li ul.sub-menu {
   position: absolute;
@@ -1155,3 +1181,5 @@ section#client {
 	margin-left: 0px;
 }
 
+
+/* ============The End============*/
