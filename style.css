@@ -574,7 +574,8 @@ button {
 }
 
 .col-12.btn-load a::after {
-  content: "c";
+  content: "";
+  font-family: Font Awesome 5 Free;
   padding-left: 9px;
 }
 
@@ -597,6 +598,7 @@ button {
   top: 8px;
   right: 73px;
   transform: rotate(206deg);
+  z-index: -2;
 
 }
 
@@ -609,11 +611,79 @@ button {
   color: #5555;
 }
 
+/* ============Skills============*/
+
+.single-progress .text h3 {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.single-progress .text {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.single-progress {
+  margin-bottom: 27px;
+}
+
+.single-progress .outer-line {
+  background: #d8dada;
+  width: 100%;
+  height: 11px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.single-progress .outer-line .inner-line {
+  background: var(--green);
+  width: 100%;
+  height: 11px;
+  border-radius: 4px;
+}
+
+.single-progress .outer-line .inner-line.graphic {
+  width: 90%;
+}
+
+.single-progress .outer-line .inner-line.web {
+  width: 70%;
+}
+
+.single-progress .outer-line .inner-line.photography {
+  width: 95%
+}
+
+.single-progress .outer-line .inner-line.branding {
+  width: 60%;
+}
+
+.single-progress .outer-line .inner-line.social {
+  width: 75%;
+}
+
+#skills {
+  background: var(--section);
+  padding-bottom: 0px !important;
+}
+
+.skill-img {
+  padding-left: 127px;
+  margin-top: -55px;
+}
+
+.skill-img img {
+  width: 420px;
+}
+
+
 
 /* ============Our Client============*/
 
 section#client {
-  background: black;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./img/newslatter.jpg);
 }
 
 .sectionHeading.subscriber-heading h1 {
@@ -784,7 +854,7 @@ section#client {
 }
 
 .single-blog .right a:after {
-  content: "--";
+  content: "";
   padding-left: 16px;
 }
 
@@ -792,6 +862,8 @@ section#client {
   position: relative;
   width: 50%;
 }
+
+
 
 .single-blog .left .overlay-icon {
   position: absolute;
@@ -806,6 +878,14 @@ section#client {
   transition: .3s;
   visibility: hidden;
   opacity: 0;
+}
+
+.single-blog .left .overlay-icon .icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 .single-blog .left .overlay-icon i {
@@ -867,6 +947,16 @@ section#client {
   visibility: visible;
   opacity: 1;
 }
+
+.single-blog .left .img {
+  height: 100%!important;
+}
+.single-blog .left .img img {
+  height: 100%!important;
+  object-fit: cover;
+}
+
+
 
 /* ============Our Partner============*/
 
@@ -971,6 +1061,7 @@ section#client {
   font-size: 14px;
   font-weight: 700;
   margin-bottom: 60px;
+  text-transform: uppercase;
 }
 
 .footer-top-2 .f-grid {
@@ -1031,6 +1122,7 @@ section#client {
   justify-content: flex-end;
 }
 
+
 .social-icon i {
   display: inline-block;
   margin-left: 15px;
@@ -1039,7 +1131,8 @@ section#client {
   height: 35px;
   border-radius: 50%;
   text-align: center;
-  line-height: 32px;
+  line-height: 35px;
+  font-size: 14px;
   color: var(--gray);
   transition: .3s;
 }
@@ -1057,7 +1150,8 @@ section#client {
   padding: 50px 0;
 }
 
-/* ============Our Services============*/
+.single-blog {
 
+	margin-left: 0px;
+}
 
-/* ============The End============ */

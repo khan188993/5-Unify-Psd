@@ -239,6 +239,7 @@ $(document).ready(function(){
   $('.blog-active.owl-carousel').owlCarousel({
     loop:true,
     nav:false,
+    margin:30,
     navText:['<i class="fas fa-arrow-circle-left"></i>','<i class="fas fa-arrow-circle-right"></i>'],
     responsiveClass:true,
     responsive:{
@@ -246,9 +247,12 @@ $(document).ready(function(){
             items:1,
         },
         600:{
-            items:2,
+            items:1,
         },
-        1000:{
+        1150:{
+            items:1,
+        },
+        1200:{
             items:2,
         }
     }
@@ -288,6 +292,9 @@ $(document).ready(function(){
         600:{
             items:1,
         },
+        900:{
+            items:2,
+        },
         1000:{
             items:2,
         }
@@ -320,6 +327,16 @@ var $grid =$('.grid').isotope({
     $(this).addClass('active');
     event.preventDefault();
   });
+
+   //mobile menu
+  $('.main-menu').meanmenu({
+    meanScreenWidth: "767",
+    meanMenuContainer: '.mobile-menu',
+  });
+ 
+//   wow js code 
+
+new WOW().init();
 
 
 

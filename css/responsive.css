@@ -1,33 +1,217 @@
+/* ============Responsive Part============*/
+/** 1205xl,995lg,775md,580sm,450esm,320mobile sm */
 /* XL Device :1200px. */
 @media (max-width: 1500px) {}
 
 /* LG Device :992px. */
 @media (max-width: 1200px) {
+  .slider-text h1 {
+    font-size: 53px;
+  }
 
+  .about-img::before {
+    right: 57px;
+
+  }
 }
 
 /* MD Device :768px. */
 @media (max-width: 991px) {
 
+
+  .slider-text h1 {
+    font-size: 42px;
+  }
+
+  .single-slider {
+    height: 0;
+
+  }
+
+  .work-btn {
+    margin-left: 34px;
+  }
+
+  .work-btn button::after {
+
+    padding-left: 15px;
+  }
+
+  .sigle-team-wrapper {
+    overflow: hidden;
+    margin-bottom: 30px;
+  }
+
+  .sectionHeading.subscriber-heading p {
+    padding: 0px;
+  }
+
+  .footer-top-1,
+  .footer-top-2 {
+    margin-bottom: 30px;
+  }
+
+  .slider-text h1,.slider-text h2 {
+    color: var(--white);
+  }
 }
 
 /* SM Small Device :550px. */
 @media only screen and (max-width: 767px) {
- 
+  /* section{
+    padding:50px 0!important;
+  } */
+
+  .slider-text h1 {
+    font-size: 30px;
+  }
+
+  .slider-btn .btn {
+    padding: 15px 20px;
+
+  }
+
+  .work-btn button {
+    padding-right: 2px;
+    font-size: 12px;
+  }
+
+  .single-team .team-content {
+    top: 86%;
+
+  }
+
+  .subscriber-btn button {
+    width: 391px;
+  }
+
+  .copyright-text {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .social-icon {
+    justify-content: center;
+  }
+
+  
+
+  
 }
 
 /* Extra small Device. */
 @media (max-width: 576px) {
 
+  section{
+    padding:50px 0!important;
+  }
+
+  .slider-text {
+    width: 100%;
+  }
+
+  .slider-text h1 {
+    font-size: 41px;
+  }
+
+  .slider-text h2 {
+    font-size: 31px;
+  }
+
+  .work-btn {
+    margin-left: 18px;
+  }
+
+  .work-btn button::after {
+    padding-left: 5px;
+  }
+
+  .single-client {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .client-img {
+    margin-right: 0px;
+    margin-bottom: 30px;
+  }
+
+  .client-content {
+    padding: 40px 30px 40px;
+    margin: 0 54px;
+  }
+  .client-content::before {
+    left: -32px;
+    top: 113px;
+  }
+
+  .client-content::before {
+    display: none;
+  }
+
+  .single-blog {
+    flex-direction: column;
+  }
+
+  .single-blog .left{
+    margin-bottom: 30px;
+  }
+
+  .single-blog .left,.single-blog .right {
+    width: 100%;
+  }
+
+
+  .single-blog .right {
+    margin-left: 0px;
+  }
+
+  
 }
 
 /* mobile Device. */
 @media (max-width: 420px) {
+  .slider-text h2 {
+    font-size: 25px;
+  }
+  .slider-text h1 {
+    font-size: 32px;
+  }
+
+  .work-btn {
+    margin: 0 40px;
+  }
+
+  .sectionHeading h1 {
+    font-size: 21px;
+  }
+
+  .sectionHeading p {
+    font-size: 14px;
+  }
+
+  .single-team::before {
+    top: 74%;
   
+  }
+  .single-team .team-content {
+    top: 80%;
+  }
+
+  .client-content {
+    margin: 0px;
+  }
+
+  .subscriber-btn button {
+    width: 254px;
+  }
+
 }
 
 @media (max-width: 320px) {
-  
+  .subscriber-btn button {
+    width: 216px;
+  }
 }
 
-/* By Kazi Talat Hridoy */
+/* ============The End============ */
